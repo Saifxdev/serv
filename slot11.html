@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Invitee Page</title>
+	<style>
+		*{
+	padding: 0;
+	margin:0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: montserrat;
+	background-image: linear-gradient(to right, #d3cce3, #e9e4f0); 
+}
+
+nav{
+	background: #727472;
+	height: 80px;
+	width: 100%;
+}
+
+label.logo{
+	color: white;
+	font-size: 45px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+	color: red;
+}
+.center {
+  background: #F2F2F2;	
+  margin: 10px;
+   margin-right: auto;
+  margin-left: auto;
+  width: 45%;
+  border: 3px solid #73AD21;
+  padding: 5%;
+  border-radius: 15px;
+   box-shadow: 10px 10px 5px lightblue inset;
+
+}
+
+h1{
+	text-align: center;
+	padding: 9px;
+	font-weight: bold;
+	color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	
+}
+
+button{
+	background-color: red;
+	border: transparent solid 2px;
+	padding: 5px 10px;
+	color: white;
+	border-radius: 8px;
+	transition: 0.3s ease-in;
+}
+
+button:hover{
+	background-color: #ccc;
+	border: 2px solid red;
+	color: black;
+	transition: 0.3s ease-out;
+	cursor: pointer;
+
+}
+
+.button_container{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.textarea_control{
+	font-size: 5px;
+	font-weight: bolder;
+}
+
+
+	</style>
+
+   <script>
+function date() {
+var mylist = document.getElementById("datee");
+document.getElementById("data").value = mylist.options[mylist.selectedIndex].text;
+}
+
+function time(){
+	var tim =document.getElementById("timee");
+	document.getElementById("tima").value = tim.options[tim.selectedIndex].text;
+}
+</script>
+
+</head>
+<body>
+    <nav>
+    	<label class="logo">Niyogan</label>
+    </nav>
+        <h1>Book your Slot</h1>
+        <div class="center">
+ 
+            <form name="myForm"  onsubmit="return validateForm()" method="post">
+
+<b> Select Date:<font style="color: red;">*</font> </b>
+<select id = "date" onchange = "date()" name="date" >
+<option> ---Choose Date--- </option>
+<option> 15 </option>
+<option> 18 </option>
+<option> 21 </option>
+<option> 24 </option>
+</select>
+<p> Your selected Date: 
+<input type = "text" id = "data" size = "6" </p>
+</form>
+<br>
+<br>
+<br>
+
+<form>
+	<b>Select Time:<font style="color: red;">*</font></b>
+	<select id="time" onchange="time()" name="time" >
+		<option>---Choose Time---</option>
+		<option>10:00 AM</option>
+		<option>12:00 PM</option>
+		<option>2:00 PM</option>
+	</select>
+	<p>Your Selected Time:
+	<input type="text" id="tima" size="5"> 
+	</p>
+</form>
+
+<br>
+<br>
+<br>
+ Description:<font style="color: red;">*</font><br>
+     <textarea name="desc" placeholder="Please Give Description Here!" style="resize: none; width: 100%;" rows="10"></textarea><br>
+     <br>
+     <br>
+    <div class="button_container">
+    	<button><a href="logjj11.html">Submit</a></button>
+    </div>
+
+        </div>
+
+
+ 
+</body>
+</html>
